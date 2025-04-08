@@ -1,0 +1,40 @@
+<script>
+fetch("https://restcountries.com/v3.1/all")
+  .then(response => response.json())
+  .then(countries => {
+    let countOfA = 0, countOfE = 0, countOfI = 0, countOfO = 0, countOfU = 0;
+
+    for (let i = 0; i < countries.length; i++) {
+      const name = countries[i].name.common;
+      const firstChar = name[0].toUpperCase(); // normalize to uppercase
+
+      switch (firstChar) {
+        case 'A':
+          countOfA++;
+          break;
+        case 'E':
+          countOfE++;
+          break;
+        case 'I':
+          countOfI++;
+          break;
+        case 'O':
+          countOfO++;
+          break;
+        case 'U':
+          countOfU++;
+          break;
+      }
+    }
+
+    console.log("Countries starting with:");
+    console.log("A: " + countOfA);
+    console.log("E: " + countOfE);
+    console.log("I: " + countOfI);
+    console.log("O: " + countOfO);
+    console.log("U: " + countOfU);
+  })
+  .catch(error => {
+    console.error("Error fetching countries:", error);
+  });
+</script>
