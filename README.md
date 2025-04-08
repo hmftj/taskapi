@@ -1,1 +1,1 @@
-<img src="task8.png" />
+<img src="task8.jpg" />
