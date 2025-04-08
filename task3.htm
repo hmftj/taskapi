@@ -1,0 +1,22 @@
+<script>
+fetch('https://restcountries.com/v3.1/all')
+  .then(response => response.json())
+  .then(data => {
+    for (let i = 0; i < data.length; i++) {
+      let country = data[i];
+
+   
+      
+      if(country.population>1000000000){
+          
+          console.table([country.name]);
+          
+         // console.table([country, population]);
+          
+      }
+    
+
+      
+    }
+  }).catch(error => console.error('Error fetching data:', error));
+</script>
