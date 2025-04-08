@@ -1,0 +1,51 @@
+<script>
+fetch("https://restcountries.com/v3.1/all")
+  .then(response => response.json())
+  .then(countries => {
+    var countOfA = 0;
+    var countOfE = 0;
+    var countOfI = 0;
+    var countOfO = 0;
+    var countOfU = 0;
+
+
+
+    for (let i = 0; i < countries.length; i++) {
+      const name = countries[i].name.common;
+      if (name[0] === 'A') {
+        console.log(name);
+        countOfA++;
+        
+      }
+      if(name[0] === 'E') {
+        console.log(name);
+        countOfE++;
+      }
+      if(name[0] === 'I') {
+        console.log(name);
+        countOfI++;
+      }
+      if(name[0] === 'O') {
+        console.log(name);
+        countOfO++;
+      }
+      if(name[0] === 'U') {
+        console.log(name);
+        countOfU++;
+      }
+      
+    }
+
+console.log("countries starts with A:"+countOfA);
+console.log("countries starts with E:"+countOfE);
+console.log("countries starts with I:"+countOfI);
+console.log("countries starts with O:"+countOfO);
+console.log("countries starts with U:"+countOfU);
+
+
+   
+  })
+  .catch(error => {
+    console.error("Error fetching countries:", error);
+  });
+</script>
