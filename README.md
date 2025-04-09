@@ -1,3 +1,36 @@
+<h1>TASK # 01 API with Promises and Async/Await in pure JS</h1>
+<img src="task1.jpg" />
+<hr>
+<h3>Normal Version with Promises</h3><a  href="task1.js"> Normal Version </a><hr>
+
+
+<h1>TASK # 02 API with Promises and Async/Await in pure JS</h1>
+<img src="task2.jpg" />
+<hr>
+<h3>Normal Version with Promises</h3><a  href="task2.js"> Normal Version </a><hr>
+
+
+
+<h1>TASK # 03 API with Promises and Async/Await in pure JS</h1>
+<img src="task8.jpg" />
+<hr>
+<h3>Normal Version with Promises</h3><a  href="task8.htm"> Normal Version </a><hr>
+
+
+<h1>TASK # 04 API with Promises and Async/Await in pure JS</h1>
+<img src="task8.jpg" />
+<hr>
+<h3>Normal Version with Promises</h3><a  href="task8.htm"> Normal Version </a><hr>
+
+
+
+
+
+
+
+
+
+
 
 <h1>TASK # 08 API with Promises and Async/Await in pure JS</h1>
 <img src="task8.jpg" />
