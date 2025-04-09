@@ -1,0 +1,22 @@
+<script>
+    fetch('https://restcountries.com/v3.1/all')
+      .then(response => response.json())
+      .then(data => {  
+        let nativeName = {}; // Initialize nativeName object
+    
+        for (let i = 0; i < data.length; i++) {
+          // Compare if the nativeName object exists
+          if (data[i].name && data[i].name.nativeName) {
+            // Assign the native name in the object
+            nativeName[data[i].name.common] = data[i].name.nativeName;
+            console.log(data[i].name);
+          }
+        }
+    
+        console.log(nativeName); // This outputs the entire nativeName object
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    </script>
+    
