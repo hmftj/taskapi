@@ -1,0 +1,25 @@
+<script>
+  async function longest() {
+    try {
+      const response = await fetch("https://restcountries.com/v3.1/all");
+      if (!response.ok) {
+        throw new Error("HTTP error! status: " + response.status);
+      }
+
+      const countries = await response.json();
+      let lonCountry = "";
+
+      for (let i = 0; i < countries.length; i++) {
+        const name = countries[i].name.common;
+        if (name.length > lonCountry.length) {
+          lonCountry = name;
+        }
+      }
+
+     document.write("The country with the longest name is:");
+      document.write(lonCountry);
+    } catch (error) {
+      console.error("Error fetching country data:", error);
+    }
+  }
+</script>
